@@ -3,6 +3,21 @@
 # (C) Copyright 2000 - 2013
 # Wolfgang Denk, DENX Software Engineering, wd@denx.de.
 
+Build instructions for for RGXX3 devices
+========================================
+**get rkbin files from https://github.com/christianhaitian/rkbin.  Can also be obtained from the upstream source at https://github.com/rockchip-linux/rkbin
+as of the date of this README update.**
+
+export CROSS_COMPILE=aarch64-none-elf-
+export BL31=../rkbin/bin/rk35/rk3568_bl31_v1.34.elf
+export ROCKCHIP_TPL=../rkbin/bin/rk35/rk3568_ddr_1056MHz_v1.13.bin
+make anbernic-rgxx3_defconfig
+make
+
+See https://github.com/christianhaitian/u-boot-rk3566/blob/anbernic-v2023.04/doc/board/anbernic/rgxx3.rst for more details
+
+Thanks to macroalpha for this uboot
+
 Summary:
 ========
 
