@@ -6,8 +6,9 @@
 Build instructions for for RGXX3 devices
 ========================================
 **get rkbin files from https://github.com/christianhaitian/rkbin.  Can also be obtained from the upstream source at https://github.com/rockchip-linux/rkbin as of the date of this README update.**
+**Also make sure you have swig installed and python3 elftools.  For debian based distros, sudo apt install swig && pip install pyelftools**
 
-export CROSS_COMPILE=aarch64-none-elf-
+export CROSS_COMPILE=aarch64-linux-gnu-
 export BL31=../rkbin/bin/rk35/rk3568_bl31_v1.34.elf
 export ROCKCHIP_TPL=../rkbin/bin/rk35/rk3568_ddr_1056MHz_v1.13.bin
 make anbernic-rgxx3_defconfig
